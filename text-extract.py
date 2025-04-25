@@ -10,7 +10,7 @@ if upload_file:
     file_bytes = np.asarray(bytearray(upload_file.read()), dtype=np.uint8)
     img = cv2.imdecode(file_bytes, 1)
 
-    st.image(img,caption="Uploaded document",use_container_width=True)
+    #st.image(img,caption="Uploaded document",use_container_width=True)
 
     gray=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
     _,thresh=cv2.threshold(gray,210,255,cv2.THRESH_BINARY)
@@ -21,8 +21,11 @@ if upload_file:
 
     oc= pyy.image_to_string(filtered)
 
-    st.subheader("Extracted Text")
-    st.text_area("OCR-Result",oc,height=150)
+
+    if st.button("Submit"):
+        st.success("Details submitted successfully")
+        st.subheader("the extracted data")
+        st.text_area("OCR RESULT",oc,height=170)
 
 
 
