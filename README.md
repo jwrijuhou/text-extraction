@@ -16,3 +16,8 @@ This project is a *Streamlit web application* that automates the processing of p
 - *OpenCV* – for image preprocessing
 - *Pytesseract* – for OCR
 - *NumPy* – for handling image data
+
+**A clear execution video is made and can access that video using this link**
+https://drive.google.com/file/d/1bCHA-OD5GJmOjUnDse81KGHGbV_454MY/view?usp=drive_link
+
+
